@@ -1,0 +1,53 @@
+package com.example.java_api.dao;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="departments")
+public class Departments {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="dept_no")
+	private int dept_no;
+	
+	@Column(name="dept_name")
+	private String dept_name;
+	
+
+	public int getDept_no() {
+		return dept_no;
+	}
+
+	public void setDept_no(int dept_no) {
+		this.dept_no = dept_no;
+	}
+
+	public String getDept_name() {
+		return dept_name;
+	}
+
+	public void setDept_name(String dept_name) {
+		this.dept_name = dept_name;
+	}
+
+	public Departments(int dept_no, String dept_name) {
+		super();
+		this.dept_no = dept_no;
+		this.dept_name = dept_name;
+	}
+
+	public Departments() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	
+	
+	
+}
