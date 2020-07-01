@@ -44,4 +44,12 @@ public class EmployeesServiceImpl implements EmployeesService {
 		return returnSaveAll;
 	}
 
+	@Override
+	public List<Employees> getByName(String Ra) {
+		// TODO Auto-generated method stub
+		String sr="%";
+		List<Employees> returnByName=employeesRepository.getByName(Ra);
+		return returnByName;
+	}
+
 }
