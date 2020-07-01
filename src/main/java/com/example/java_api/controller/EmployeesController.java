@@ -43,4 +43,11 @@ public class EmployeesController {
 		List<Employees> us=employeesService.saveAll(employees);
 		return us;
 	}
+	
+	@RequestMapping(value="/getByName/{first_name}")
+	public List<Employees> getByName(@PathVariable("first_name") String Ra) {
+	    List<Employees>	us=employeesService.getByName(Ra);
+		return us;
+	}
+	
 }
