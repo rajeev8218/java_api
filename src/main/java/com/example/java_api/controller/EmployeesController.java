@@ -50,4 +50,10 @@ public class EmployeesController {
 		return us;
 	}
 	
+	@RequestMapping(value="/getByName2/{1%}/{2%}")
+	public List<Employees> getByName2(@PathVariable("1%") String Ra,@PathVariable("2%") String Su) {
+	    List<Employees>	us=employeesService.getByName2(Ra, Su);
+		return us;
+	}
+	
 }
