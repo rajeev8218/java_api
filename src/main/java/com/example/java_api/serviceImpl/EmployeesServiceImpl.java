@@ -47,9 +47,15 @@ public class EmployeesServiceImpl implements EmployeesService {
 	@Override
 	public List<Employees> getByName(String Ra) {
 		// TODO Auto-generated method stub
-		String sr="%";
 		List<Employees> returnByName=employeesRepository.getByName(Ra);
 		return returnByName;
+	}
+
+	@Override
+	public List<Employees> getByName2(String Ra, String Su) {
+		// TODO Auto-generated method stub
+		List<Employees> returnByName2=employeesRepository.getByName2(Ra, Su);
+		return returnByName2;
 	}
 
 }
