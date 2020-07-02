@@ -58,4 +58,11 @@ public class EmployeesServiceImpl implements EmployeesService {
 		return returnByName2;
 	}
 
+	@Override
+	public List<Employees> getCharContains(String Ra) {
+		// TODO Auto-generated method stub
+		List<Employees> returnCharContains=employeesRepository.getCharContains(Ra);
+		return returnCharContains;
+	}
+
 }
