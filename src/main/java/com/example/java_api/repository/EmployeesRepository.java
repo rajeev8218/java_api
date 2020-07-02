@@ -18,4 +18,12 @@ public interface EmployeesRepository extends JpaRepository<Employees, Integer>{
 	@Query(value="select * from employees where first_name like ?1% ", nativeQuery=true)
 	
 	public List<Employees>getByName(@Param("first_name") String Ra);
+
+	@Query(value="select * from employees where first_name like ?1% or first_name like ?2% ", nativeQuery=true)
+	
+	public List<Employees>getByName2(@Param("1%") String Ra,@Param("2%") String Su);
+
+
 }
+
+
