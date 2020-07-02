@@ -56,4 +56,10 @@ public class EmployeesController {
 		return us;
 	}
 	
+	@RequestMapping(value="/getCharContains/{first_name}")
+	public List<Employees> getCharContains(@PathVariable("first_name") String Ra) {
+	    List<Employees>	us=employeesService.getCharContains(Ra);
+		return us;
+	}
+	
 }
