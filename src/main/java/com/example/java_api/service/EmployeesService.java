@@ -15,4 +15,6 @@ public List<Employees> getAll();
 	public List<Employees> saveAll(List<Employees> employees);
 	
 	public List<Employees> getByName(String Ra);
+	
+	public List<Employees> getByName2(String Ra, String Su);
 }
