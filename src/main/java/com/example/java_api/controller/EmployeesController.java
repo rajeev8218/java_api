@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.java_api.dao.DateDao;
 import com.example.java_api.dao.Employees;
 import com.example.java_api.service.EmployeesService;
 
@@ -61,5 +62,12 @@ public class EmployeesController {
 	    List<Employees>	us=employeesService.getCharContains(Ra);
 		return us;
 	}
+	
+	@RequestMapping(value="/getByDate", method= RequestMethod.POST)
+	public List<Employees> getByDate(@RequestBody DateDao dateDao){
+		List<Employees> returnByDate=employeesService.getByDate(dateDao.getFromdate(), dateDao.getTodate());
+		return returnByDate;
+	}
+	
 	
 }
