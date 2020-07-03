@@ -1,5 +1,6 @@
 package com.example.java_api.repository;
 
+
 import java.util.List;
 import java.util.Optional;
 
@@ -26,6 +27,11 @@ public interface EmployeesRepository extends JpaRepository<Employees, Integer>{
 	@Query(value="select * from employees where first_name like %?1% ", nativeQuery=true)
 	
 	public List<Employees>getCharContains(@Param("first_name") String Ra);
+	
+	@Query(value="select * from employees where hire_date between ?1 and ?2 ", nativeQuery=true)
+	
+	public List<Employees>getByDate(@Param("1") String d1,@Param("2") String d2 );
+	
 }
 
 
