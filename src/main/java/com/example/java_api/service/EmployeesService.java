@@ -18,4 +18,7 @@ public List<Employees> getAll();
 	public List<Employees> getByName2(String Ra, String Su);
 	
 	public List<Employees>getCharContains(String Ra);
+	
+	public List<Employees>getByDate(String d1, String d2 );
+	
 }
