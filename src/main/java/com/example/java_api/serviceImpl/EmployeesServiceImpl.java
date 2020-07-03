@@ -65,4 +65,13 @@ public class EmployeesServiceImpl implements EmployeesService {
 		return returnCharContains;
 	}
 
+	@Override
+	public List<Employees> getByDate(String d1, String d2) {
+		// TODO Auto-generated method stub
+		List<Employees> returnByDate=employeesRepository.getByDate(d1, d2);
+		return returnByDate;
+	}
+
+	
+
 }
